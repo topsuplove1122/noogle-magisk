@@ -26,7 +26,7 @@ cp apk/com.google.android.gms* module/system/product/priv-app/GmsCoreMicroG/GmsC
 cp apk/com.android.vending* module/system/product/priv-app/PhoneskyMicroG/Phonesky.apk
 cp apk/com.google.android.gsf* module/system/product/priv-app/GoogleServicesFrameworkMicroG/GoogleServicesFramework.apk
 
-module_version="$(jq -r '.version' update-microg.json)"
+module_version="$(grep '^version=' module/module.prop | cut -d'=' -f2)"
 echo "[I] Module version: $module_version"
 module_filename="noogle-microg-v$module_version.zip"
 
