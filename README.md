@@ -17,6 +17,7 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
 > It's a good idea to enable ADB debugging as well before installing in case of any issues.
 
 1. Download latest version from [releases](https://github.com/SelfRef/noogle-magisk/releases)
+    - Or build it yourself
 2. Install through Magisk app
 3. Reboot
 4. In Magisk click "Action" button next to module to grant permissions
@@ -25,6 +26,7 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
     - If not, tap them to set the correct option
 6. Check signature spoofing support at the top
     - If your ROM doesn't support signature spoofing, you must add it: [check troubleshooting](#signatures-are-not-correct)
+7. (optionally) If you have issues with microG crashing, install microG as user apps: [check troubleshooting](#microg-crashing)
 
 > [!WARNING]
 > Installing Play Integrity Fix module will cause microG to crash.
@@ -35,7 +37,7 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
 0. Use Linux, Mac or WSL on Windows
 1. Install `zip`, `curl`, `jq` if not present
 2. Run `./pull-latest-microg.sh`
-    - Or download APKs manually and place in `apk/`
+    - Or [download APKs manually](https://microg.org/download.html) and place in `apk/`
 3. Run `./build-noogle-microg.sh`
 4. Module will be created in `dist/`
 
@@ -62,6 +64,9 @@ In order for microG apps to have the correct signatures visible by Android, your
     - Leave default System Framework selected only
 6. Reboot
 7. Check in microG Self-Check if signatures are correct now
+
+## microG crashing
+Installing Play Integrity Fix on top of my module is making microG app crash for the moment, but it doesn't cause bootloop, so it can be safely removed from Magisk modules after boot. The workaround for this is installing both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix will work properly. I work on making this workaround not necessary.
 
 ### Bootloop
 In this case if you have ADB debugging enabled just connect your phone to PC and in terminal run `adb shell magisk --remove-modules`. It will remove all modules.
