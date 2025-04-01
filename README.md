@@ -67,7 +67,7 @@ In order for microG apps to have the correct signatures visible by Android, your
 7. Check in microG Self-Check if signatures are correct now
 
 ## microG crashing
-Installing Play Integrity Fix on top of my module is making microG app crash for the moment, but it doesn't cause bootloop, so it can be safely removed from Magisk modules after boot. The workaround for this is installing both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix will work properly. I work on making this workaround not necessary.
+Installing Play Integrity Fix on top of my module is making microG app crash for the moment (in some cases may cause bootloop) so I don't recommend it to install right now. The workaround for this is installing both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix should work properly. I work on making this workaround not necessary.
 
 ### Bootloop
 In this case if you have ADB debugging enabled just connect your phone to PC and in terminal run `adb shell magisk --remove-modules`. It will remove all modules.
