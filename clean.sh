@@ -7,3 +7,7 @@
 echo "[P] Removing old .replace files..."
 find module -name ".replace" -type f -exec rm -f {} +
 echo "[P] Done removing old .replace files."
+
+echo "[P] Removing empty directories..."
+find module -type d -empty -delete
+echo "[P] Done removing empty directories."
