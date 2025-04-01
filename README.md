@@ -11,7 +11,11 @@ Noogle Debloat [WIP] | Removes other Google system apps from Android (still can 
 
 ## Install
 
-0. It's a good idea to enable ADB debugging
+It requires Magisk to be installed obviously as it's a Magisk module.
+
+> [!TIP]
+> It's a good idea to enable ADB debugging as well before installing in case of any issues.
+
 1. Download latest version from [releases](https://github.com/SelfRef/noogle-magisk/releases)
 2. Install through Magisk app
 3. Reboot
