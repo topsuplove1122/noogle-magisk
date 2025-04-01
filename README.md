@@ -22,6 +22,10 @@ Noogle Debloat [WIP] | Removes other Google system apps from Android (still can 
 6. Check signature spoofing support at the top
     - If your ROM doesn't support signature spoofing, you must add it: [check troubleshooting](#signatures-are-not-correct)
 
+> [!WARNING]
+> Installing Play Integrity Fix module will cause microG to crash.
+> This issue is yet to be resolved.
+
 ## Build
 
 0. Use Linux, Mac or WSL on Windows
