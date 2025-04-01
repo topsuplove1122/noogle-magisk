@@ -11,7 +11,7 @@ Noogle Debloat [WIP] | Removes other Google system apps from Android (still can 
 
 ## Install
 
-It requires Magisk to be installed obviously as it's a Magisk module.
+It requires Magisk to be installed obviously as it's a Magisk module. If you don't have it yet, consult the [official installation instructions](https://topjohnwu.github.io/Magisk/install.html).
 
 > [!TIP]
 > It's a good idea to enable ADB debugging as well before installing in case of any issues.
