@@ -2,7 +2,7 @@
 
 repo_url=https://microg.org/fdroid/repo
 apk_dir=apk
-wait_time=15
+wait_time=5
 
 mkdir -p "$apk_dir"
 
@@ -19,8 +19,8 @@ if [ -f "$gms_apk" ] && [ $(stat -c%s "$gms_apk") -gt 1000 ]; then
 else
 	rm -f "$apk_dir/com.google.android.gms*"
 	echo "[P] Pulling latest microG Services..."
-	echo "[I] Waiting for 3 seconds to avoid rate limiting..."
-	sleep 3 # To avoid rate limiting
+	echo "[I] Waiting for $wait_time seconds to avoid rate limiting..."
+	sleep $wait_time # To avoid rate limiting
 
 	curl -L --progress-bar $repo_url$latest_gms -o "$gms_apk"
 	if [ $(stat -c%s "$gms_apk") -lt 1000 ]; then

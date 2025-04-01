@@ -1,3 +1,5 @@
+# This will work with next release of Magisk
+# for now, we need to use .replace files created by prepare.sh
 REMOVE="
 /system/product/priv-app/GmsCore
 /system/product/priv-app/PrebuiltGmsCore
