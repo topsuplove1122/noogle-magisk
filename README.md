@@ -52,15 +52,16 @@ Need more tests...
 ### Signatures are not correct
 In order for microG apps to have the correct signatures visible by Android, your ROM must allow for [signature spoofing](https://github.com/microg/GmsCore/wiki/Signature-Spoofing). If it does not (like any stock Android), this is the way I recommend:
 
-1. Download and install LSPosed through Magisk
+1. Enable Zygisk in Magisk's settings
+2. Download and install LSPosed through Magisk
     - [JingMatrix fork](https://github.com/JingMatrix/LSPosed/releases) up to Android 15 (maintained)
     - [Official version](https://github.com/LSPosed/LSPosed/releases) up to Android 14 (not maintaned anymore)
-2. Download and install [FakeGApps](https://github.com/whew-inc/FakeGApps/releases) APK
-3. Reboot
-4. Open LSPosed from notifications and enable FakeGapps module
+3. Download and install [FakeGApps](https://github.com/whew-inc/FakeGApps/releases) APK
+4. Reboot
+5. Open LSPosed from notifications and enable FakeGapps module
     - Leave default System Framework selected only
-5. Reboot
-6. Check in microG Self-Check if signatures are correct now
+6. Reboot
+7. Check in microG Self-Check if signatures are correct now
 
 ### Bootloop
 In this case if you have ADB debugging enabled just connect your phone to PC and in terminal run `adb shell magisk --remove-modules`. It will remove all modules.
