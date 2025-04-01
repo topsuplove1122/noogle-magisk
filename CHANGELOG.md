@@ -1,3 +1,6 @@
+# v1.2
+- Fixed removing GApps on Magisk v28.1 (current stable)
+
 # v1.1
 - Added Services Framework Proxy
 - Improved local building scripts
