@@ -18,7 +18,7 @@ for perm in $perms; do
 			printf "|-%-33s %s\n" "[I] $perm" "GRANTED"
 		else
 			printf "|-%-29s %s\n" "[E] $perm" "NOT GRANTED"
-			echo "|-[E] Cannot grant, do it from microG app"
+			echo "|-[E] Cannot grant, do it from microG app."
 			warn="1"
 		fi
 	fi
@@ -29,8 +29,8 @@ echo "[P] Checking microG Services permissions done."
 echo
 
 if [ "$warn" ]; then
-	echo "[W] Some permissions were not granted"
-	echo "[W] You can grant them from the microG app"
+	echo "[W] Some permissions were not granted."
+	echo "[W] You can grant them from the microG app."
 else
 	echo "[I] All permissions granted!"
 fi
