@@ -1,8 +1,7 @@
 #!/bin/sh
 
-for apk in $(ls -1 apk/*.apk); do
-	adb install --user all "$apk"
-done
+adb install --user all apk/com.google.android.gms*.apk
+adb install --user all apk/com.android.vending*.apk
 
 echo -n 'Reboot?'
 read
