@@ -1,6 +1,6 @@
 {
-	"version": 1.2,
-	"versionCode": 102,
-	"zipUrl": "https://github.com/SelfRef/noogle-magisk/releases/download/v1.2/noogle-microg-v1.2.zip",
+	"version": 2.0,
+	"versionCode": 200,
+	"zipUrl": "https://github.com/SelfRef/noogle-magisk/releases/download/v2.0/noogle-microg-v2.0.zip",
 	"changelog": "https://raw.githubusercontent.com/SelfRef/noogle-magisk/refs/heads/master/CHANGELOG.md"
 }
