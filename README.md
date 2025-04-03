@@ -42,7 +42,7 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
 
 ### Configurations
 
-Module Name | Notes
+Module/Type | Notes
 :--- | ---
 LSPosed + FakeGapps | Both official and from JingMatrix
 Play Integrity Fix | Requires installing user updates
