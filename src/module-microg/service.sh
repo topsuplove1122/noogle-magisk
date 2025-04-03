@@ -1,3 +1,6 @@
+MODDIR=${0%/*}
+source "$MODDIR/common.sh"
+
 log_path=/data/adb/noogle-microg.log
 echo "[I] Starting noogle-microg boot script." > "$log_path"
 
@@ -8,7 +11,7 @@ MODDIR=${0%/*}
 source "$MODDIR/common.sh"
 
 # Ensure Google updates are not installed
-remove_package_updates google >> "$log_path" 2>&1
+# remove_package_updates google >> "$log_path" 2>&1
 
 # Doesn't work for some reason, needs manual interaction
 # grant_microg_permissions >> "$log_path" 2>&1
