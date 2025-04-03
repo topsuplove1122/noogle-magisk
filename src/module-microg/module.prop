@@ -1,0 +1,7 @@
+id=noogle-microg
+name=Noogle microG
+version=2.0
+versionCode=200
+author=SelfRef
+description=Replaces Google Services with microG
+updateJson=https://raw.githubusercontent.com/SelfRef/noogle-magisk/refs/heads/master/update-microg.json

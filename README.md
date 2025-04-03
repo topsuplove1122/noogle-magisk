@@ -28,27 +28,34 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
     - If your ROM doesn't support signature spoofing, you must add it: [check troubleshooting](#signatures-are-not-correct)
 7. (optionally) If you have issues with microG crashing, install microG as user apps: [check troubleshooting](#microg-crashing)
 
-> [!WARNING]
-> Installing Play Integrity Fix module will cause microG to crash.
-> This issue is yet to be resolved.
-
 ## Build
 
 0. Use Linux, Mac or WSL on Windows
 1. Install `zip`, `curl`, `jq` if not present
 2. [Download APKs manually](https://microg.org/download.html) and place in `apk/`
     - Or run `./pull-latest-microg.sh` (not reliable for now)
-3. Run `./prepare.sh`
-4. Run `./build-noogle-microg.sh`
-5. Module will be created in `dist/`
+3. Run `./build-noogle-microg.sh`
+    - Check `-h` flag for help with build options
+4. Module will be created in `dist/`
 
-## Tested on
+## Tested
+
+### Configurations
+
+Module Name | Notes
+:--- | ---
+LSPosed + FakeGapps | Both official and from JingMatrix
+Play Integrity Fix | Requires installing user updates
+Store updates | Installing user updates from F-Droid repo
+
+### Devices
 The module was tested on:
 Device | OS | Android Version
-:---: | :---: | :---:
+:--- | :---: | :---:
 Nothing Phone (1) | NothingOS 3.0 | 15
+Lenovo Yoga Tab 13 | Stock | 13
 
-Need more tests...
+More to come...
 
 ## Troubleshooting
 
@@ -67,7 +74,7 @@ In order for microG apps to have the correct signatures visible by Android, your
 7. Check in microG Self-Check if signatures are correct now
 
 ## microG crashing
-Installing Play Integrity Fix on top of my module is making microG app crash for the moment (in some cases may cause bootloop) so I don't recommend it to install right now. The workaround for this is installing both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix should work properly. I work on making this workaround not necessary.
+If you want to use other modules interacting with microG, like Play Integrity Fix on top of this module, it's necessary to install both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix will work properly. In the future this workaround may be not necessary.
 
 ### Bootloop
 In this case if you have ADB debugging enabled just connect your phone to PC and in terminal run `adb shell magisk --remove-modules`. It will remove all modules.
@@ -76,4 +83,4 @@ If you don't have ADB enabled, you may try to restart the device a few times (ho
 
 ## QA
 - Q: What is the difference between this and other microG installers?
-- A: This installer aims for stock Android support with Google apps preinstalled. Should work on AOSP-based as well.
+- A: This module aims for stock Android support with Google apps preinstalled and doesn't require debloating Google apps first. Should work on AOSP-based as well.

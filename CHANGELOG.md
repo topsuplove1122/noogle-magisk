@@ -1,3 +1,14 @@
+# 2.0
+- Restructured project
+- Better compatibility with stock Android
+- Fixed bootloop on NothingOS
+- Improved build script allows for different configurations
+- Removing app updates during module install
+- Improved GApps removing
+- Libraries extraction during install (fixes Google Maps)
+- Installing user app on top is supported but optional
+- Support for Play Integrity Fix (requires installing update)
+
 # v1.2
 - Fixed removing GApps on Magisk v28.1 (current stable)
 
