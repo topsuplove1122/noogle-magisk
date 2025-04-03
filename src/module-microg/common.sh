@@ -9,7 +9,7 @@ remove_files="
 
 remove_package_updates() {
 	filter=${1}
-	echo "[P] Removing package updates..."
+	echo "[P] Checking package updates..."
 	echo "-------------------------------------------"
 	echo "[M] PACKAGE WITH UPDATE                TYPE"
 	echo "-------------------------------------------"
@@ -35,7 +35,7 @@ remove_package_updates() {
 		fi
 	done
 	echo "-------------------------------------------"
-	echo "[I] Done removing package updates."
+	echo "[I] Done checking package updates."
 }
 
 grant_microg_permissions() {
