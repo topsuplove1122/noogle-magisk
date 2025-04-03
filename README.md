@@ -73,7 +73,7 @@ In order for microG apps to have the correct signatures visible by Android, your
 6. Reboot
 7. Check in microG Self-Check if signatures are correct now
 
-## microG crashing
+### microG crashing
 If you want to use other modules interacting with microG, like Play Integrity Fix on top of this module, it's necessary to install both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix will work properly. In the future this workaround may be not necessary.
 
 ### Bootloop
