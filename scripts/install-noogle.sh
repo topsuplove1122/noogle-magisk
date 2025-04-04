@@ -7,7 +7,7 @@ if [ "$1" = "-y" ]; then
     skip_confirmations=true
 fi
 
-./build-noogle-microg.sh # -s '' -d system
+./scripts/build-noogle-microg.sh # -s '' -d system
 if [ "$skip_confirmations" = false ]; then
     echo -n 'Install?'
     read

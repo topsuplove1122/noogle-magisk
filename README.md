@@ -24,17 +24,18 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
     - Or open microG app and grant them through Self-Check
 5. Ensure all permission boxes are checked in Self-Check
     - If not, tap them to set the correct option
-6. Check signature spoofing support at the top
+6. Check signature spoofing status at the top
     - If your ROM doesn't support signature spoofing, you must add it: [check troubleshooting](#signatures-are-not-correct)
-7. (optionally) If you have issues with microG crashing, install microG as user apps: [check troubleshooting](#microg-crashing)
+7. If you have issues with microG crashing, install microG as user apps: [check troubleshooting](#microg-crashing)
+    - You can do it quickly using `scripts/install-user-apks.sh`
 
 ## Build
 
 0. Use Linux, Mac or WSL on Windows
 1. Install `zip`, `curl`, `jq` if not present
 2. [Download APKs manually](https://microg.org/download.html) and place in `apk/`
-    - Or run `./pull-latest-microg.sh` (not reliable for now)
-3. Run `./build-noogle-microg.sh`
+    - Or run `scripts/pull-latest-microg.sh` (not reliable)
+3. Run `scripts/build-noogle-microg.sh`
     - Check `-h` flag for help with build options
 4. Module will be created in `dist/`
 
@@ -46,7 +47,7 @@ Module/Type | Notes
 :--- | ---
 LSPosed + FakeGapps | Both official and from JingMatrix
 Play Integrity Fix | Requires installing user updates
-Store updates | Installing user updates from F-Droid repo
+User updates | Installing microG updates from F-Droid repo
 
 ### Devices
 The module was tested on:
@@ -77,9 +78,11 @@ In order for microG apps to have the correct signatures visible by Android, your
 If you want to use other modules interacting with microG, like Play Integrity Fix on top of this module, it's necessary to install both microG Services and microG Companion (same APKs as in this module, from [official site](https://microg.org/download.html)) on top, as user updates. Then Play Integrity Fix will work properly. In the future this workaround may be not necessary.
 
 ### Bootloop
-In this case if you have ADB debugging enabled just connect your phone to PC and in terminal run `adb shell magisk --remove-modules`. It will remove all modules.
+In this case if you have ADB debugging enabled just connect your phone to PC and run `scripts/disable-noogle.sh` in terminal. It will disable Noogle microG module and reboot your device.
 
-If you don't have ADB enabled, you may try to restart the device a few times (holding Power + Vol-) until Magisk safe mode hits and modules will be disabled.
+More nuclear option is to run `adb shell magisk --remove-modules`. It will remove all modules from Magisk and reboot.
+
+If you don't have ADB enabled, you may try to restart the device a few times (holding Power + Vol-) while keeping Vol- for a while until animalted boot animation will start. This will trigger Magisk safe mode and modules will be disabled. More about this in [official documentation](https://topjohnwu.github.io/Magisk/faq.html).
 
 ## QA
 - Q: What is the difference between this and other microG installers?
