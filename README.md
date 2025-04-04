@@ -56,6 +56,7 @@ Device | OS | Android Version
 :--- | :---: | :---:
 Nothing Phone (1) | NothingOS 3.0 | 15
 Lenovo Yoga Tab 13 | Stock | 13
+Samsung Galaxy Tab S | LineageOS 17.1 | 10
 
 More to come...
 
