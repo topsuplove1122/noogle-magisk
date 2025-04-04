@@ -85,12 +85,17 @@ cp "$apk_dir"/com.google.android.gsf* "$module_dir/$destination_dir/priv-app/Goo
 echo "[P] Copying module files to module directory..."
 cp -r "$src_dir/$module_dir"/* "$module_dir/"
 mv "$module_dir/etc" "$module_dir/$destination_dir/"
+
+echo "[P] Pathing customize script..."
 sed -i "1i gms_path=$gms_path" "$module_dir/customize.sh"
 sed -i "1i gms_dir=$gms_dir" "$module_dir/customize.sh"
 
+echo "[P] Removing service script... (doesn't work)"
+rm -f "$module_dir/service.sh"
+
 module_version="$(grep '^version=' "$src_dir/$module_dir/module.prop" | cut -d'=' -f2)"
 echo "[I] Module version: $module_version"
-module_filename="noogle-microg-v$module_version.zip"
+module_filename="noogle-microg-$module_version.zip"
 
 echo "[P] Compressing module archive..."
 mkdir -p "$dist_dir"

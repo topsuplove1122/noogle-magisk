@@ -13,7 +13,7 @@ if [ "$skip_confirmations" = false ]; then
     read
 fi
 adb push dist/noogle-microg-v$module_version.zip /sdcard/
-adb shell su -c "magisk --install-module /sdcard/noogle-microg-v$module_version.zip"
+adb shell su -c "magisk --install-module /sdcard/noogle-microg-$module_version.zip"
 if [ "$skip_confirmations" = false ]; then
     echo -n 'Reboot?'
     read
