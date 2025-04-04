@@ -1,4 +1,7 @@
-# 2.0
+# v2.1
+- Prevent uninstall microG updates during self-check (Action button in Magisk)
+
+# v2.0
 - Restructured project
 - Better compatibility with stock Android
 - Fixed bootloop on NothingOS
