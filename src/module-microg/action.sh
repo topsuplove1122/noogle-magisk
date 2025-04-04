@@ -6,7 +6,7 @@ echo
 echo "[W] microG APKs will be restored to original versions."
 
 echo
-remove_package_updates
+remove_package_updates google
 
 echo
 echo

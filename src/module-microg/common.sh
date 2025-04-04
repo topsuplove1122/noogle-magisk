@@ -20,7 +20,11 @@ remove_package_updates() {
 		microg_type=$(pm dump "$package" | grep -q 'FAKE_PACKAGE_SIGNATURE' && echo "true" || echo "false")
 		if [ -n "$path" ]; then
 			if [ "$microg_type" = "true" ]; then
-				printf "%-36s %s\n" "[I] $package" "MICROG"
+				if [ "$filter" = "google" ]; then
+					printf "%-32s %s\n" "[I] $package" "MICROG, OK"
+				else
+					printf "%-36s %s\n" "[W] $package" "MICROG"
+				fi
 			else
 				printf "%-36s %s\n" "[W] $package" "GOOGLE"
 			fi
