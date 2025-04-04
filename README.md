@@ -37,7 +37,8 @@ It requires Magisk to be installed obviously as it's a Magisk module. If you don
     - Or run `scripts/pull-latest-microg.sh` (not reliable)
 3. Run `scripts/build-noogle-microg.sh`
     - Check `-h` flag for help with build options
-4. Module will be created in `dist/`
+    - Module will be created in `dist/`
+4. Or run `scripts/install-noogle.sh` to build and install through ADB
 
 ## Tested
 
